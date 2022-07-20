@@ -1,0 +1,17 @@
+{
+  "name": "hude-online",
+  "version": "0.0.2",
+  "description": "The Metaverse virtual reality. The final outcome of all virtual worlds, augmented reality, and the Internet.",
+  "main": "app.js",
+  "source": "index.html",
+  "scripts": {
+    "dev": "npx parcel index.html",
+    "build": "npx parcel build --public-url ./ src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-builder": "^5.35.0",
+    "firebase": "^9.9.0"
+  }
+}

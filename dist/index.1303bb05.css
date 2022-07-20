@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: linear-gradient(#64beff -50%, #6e96ff 69.71%, #2a65ff 150%);
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: Source Sans Pro, sans-serif;
+  display: flex;
+}
+
+.game-container {
+  width: 240px;
+  height: 208px;
+  image-rendering: pixelated;
+  background: url("map.3629ba30.png") no-repeat;
+  position: relative;
+  transform: scale(3);
+}
+
+.player-info {
+  align-items: flex-end;
+  gap: .5em;
+  padding: 1em;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+input[type="text"], button {
+  height: 44px;
+  border-radius: 4px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 150px;
+  text-transform: uppercase;
+  border: 3px solid #222034;
+  outline: 0;
+  padding-left: .5em;
+}
+
+input[type="text"]:focus {
+  border-color: #f000ff;
+}
+
+button {
+  cursor: pointer;
+  background: #59ff5a;
+  border: 0;
+  border-bottom: 2px solid #1e830b;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+button:active {
+  position: relative;
+  top: 1px;
+}
+
+.grid-cell {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+}
+
+.Character {
+  transition: transform .4s;
+}
+
+.Character.you {
+  z-index: 1;
+}
+
+.Character.you .Character_you-arrow {
+  display: block;
+}
+
+.Character_you-arrow {
+  width: 7px;
+  height: 5px;
+  background: url("arrow.c7fa6fb4.png") no-repeat;
+  display: none;
+  position: absolute;
+  top: -18px;
+  left: 5px;
+}
+
+.Character_sprite {
+  background: url("characters.d56a8153.png");
+  top: -3px;
+  overflow: hidden;
+}
+
+.Character[data-direction="right"] .Character_sprite {
+  background-position-x: 16px;
+}
+
+.Character[data-color="red"] .Character_sprite {
+  background-position-y: -16px;
+}
+
+.Character[data-color="orange"] .Character_sprite {
+  background-position-y: -32px;
+}
+
+.Character[data-color="yellow"] .Character_sprite {
+  background-position-y: -48px;
+}
+
+.Character[data-color="green"] .Character_sprite {
+  background-position-y: -64px;
+}
+
+.Character[data-color="purple"] .Character_sprite {
+  background-position-y: -80px;
+}
+
+.Character_shadow {
+  background: url("shadow.f743a709.png") no-repeat;
+}
+
+.Character_name-container {
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: #333;
+  border-radius: 3px;
+  padding: 1px 2px;
+  font-size: 5px;
+  font-weight: bold;
+  position: absolute;
+  top: -12px;
+  left: -5px;
+}
+
+.Character_coins {
+  color: gold;
+  margin-left: 1px;
+}
+
+.Coin_sprite {
+  background: url("coin.eeadbcc2.png") no-repeat;
+  animation: coinFloat .8s linear infinite alternate-reverse;
+}
+
+@keyframes coinFloat {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(5px);
+  }
+}
+
+.Coin_shadow {
+  background: url("coin-shadow.62b62b26.png") no-repeat;
+}
+
+/*# sourceMappingURL=index.1303bb05.css.map */
