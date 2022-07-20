@@ -18,7 +18,10 @@ const mapData = {
     "9x9": true,
   },
 };
-
+var context = canvas.getContext('2d');
+context.webkitImageSmoothingEnabled = false;
+context.mozImageSmoothingEnabled = false;
+context.imageSmoothingEnabled = false;
 // Options for Player Colors... these are in the same order as our sprite sheet
 const playerColors = ["blue", "red", "orange", "yellow", "green", "purple"];
 
